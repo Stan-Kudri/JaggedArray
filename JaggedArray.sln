@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JaggedArray", "JaggedArray\JaggedArray.csproj", "{7838F49A-C598-40D8-8300-7C1719FA56B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaggedArray.Test", "JaggedArray.Test\JaggedArray.Test.csproj", "{D78148DA-16E5-4AAB-907E-67B92E716329}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7838F49A-C598-40D8-8300-7C1719FA56B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7838F49A-C598-40D8-8300-7C1719FA56B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7838F49A-C598-40D8-8300-7C1719FA56B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7838F49A-C598-40D8-8300-7C1719FA56B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78148DA-16E5-4AAB-907E-67B92E716329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78148DA-16E5-4AAB-907E-67B92E716329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78148DA-16E5-4AAB-907E-67B92E716329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78148DA-16E5-4AAB-907E-67B92E716329}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8544568-BCAE-49E7-999D-0CF0B766EA1F}
+	EndGlobalSection
+EndGlobal
