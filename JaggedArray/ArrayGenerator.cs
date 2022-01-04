@@ -23,7 +23,7 @@ internal class ArrayGenerator
             generateArray[i] = new int[size];
             for (var j = 0; j < size; j++)
             {
-                generateArray[i][j] = Random.Shared.Next(0, 10);
+                generateArray[i][j] = Random.Shared.Next(-10, 10);
             }
         }
         return generateArray;

@@ -6,8 +6,12 @@ var array = arrayGenerator.Generate();
 Print(array);
 Console.ReadLine();
 
-void Print(int [][] array)
+var task1Array = new Task_13(array);
+var sortArray = task1Array.BubbleTeethSort();
+Print(sortArray);
+
+void Print(int[][] array)
 {
-    foreach(var innerArray in array)
+    foreach (var innerArray in array)
         Console.WriteLine("[{0}]", string.Join(", ", innerArray));
 }
