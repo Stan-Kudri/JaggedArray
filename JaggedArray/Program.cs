@@ -1,10 +1,13 @@
-﻿
-using JaggedArray;
+﻿using JaggedArray;
 
 var arrayGenerator = new ArrayGenerator();
 var array = arrayGenerator.Generate();
 Print(array);
 Console.ReadLine();
+
+/*var task2Array = new Task_12(array);
+var maxmin = task2Array.MaxAndMinElement();
+Console.WriteLine(maxmin);*/
 
 var task1Array = new Task_13(array);
 var sortArray = task1Array.BubbleTeethSort();

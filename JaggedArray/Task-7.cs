@@ -13,7 +13,7 @@ namespace JaggedArray
 
         public Task_7(int[][] array) => _array = array;
 
-        public int FirstPositiveElement()
+        public int? FirstPositiveElement()
         {
             for(var i=0; i < _array.Length; i++)
             {
@@ -25,7 +25,7 @@ namespace JaggedArray
                     }
                 }
             }
-            return 0;
+            return null;
         }
     }
 }

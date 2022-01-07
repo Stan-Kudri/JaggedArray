@@ -16,7 +16,7 @@ namespace JaggedArray
             _array = array;
         }
 
-        public int NumberPositiveElements()
+        public int? NumberPositiveElements()
         {
             var numberElements = 0;
             foreach(var item in _array)

@@ -16,21 +16,25 @@ namespace JaggedArray
             _array = array;
         }
 
+        private void Swap(int[] array, int j, int k)
+        {
+            var number = array[k];
+            array[k] = array[j];
+            array[j] = number;
+        }
+
         public int[][] BubbleTeethSort()
         {
             var sortedArray = _array;            
             for(var i = 0; i < sortedArray.Length; i++)
             {
-                int number;
                 for (var j = 0; j < sortedArray[i].Length; j++)
                 {
                     for(var k = j+1; k < sortedArray[i].Length; k++)
                     {
                         if(sortedArray[i][j] > sortedArray[i][k])
                         {
-                            number = sortedArray[i][k];
-                            sortedArray[i][k] = sortedArray[i][j];
-                            sortedArray[i][j] = number;
+                            Swap(sortedArray[i], j, k);
                         }
                     }
                 }

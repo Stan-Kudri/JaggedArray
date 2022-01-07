@@ -13,17 +13,20 @@ namespace JaggedArray
 
         public Task_11(int[][] array) => _array = array;
 
-        public int MinElement()
+        public int? MinElement()
         {
             var minValue = int.MaxValue;
             foreach(var item in _array)
             {
-                foreach (var element in item.Where(element => element < minValue))
+                foreach (var element in item)
                 {
-                    minValue = element;
+                    if (element < minValue)
+                    {
+                        minValue = element;
+                    }
                 }
             }
-            return minValue;
+            return null;
         }
     }
 }

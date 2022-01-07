@@ -18,9 +18,12 @@ namespace JaggedArray
             var summ = 0;
             foreach(var item in _array)
             {
-                foreach (var element in item.Where(element => element % 2 == 0))
+                foreach (var element in item)
                 {
-                    summ += element;
+                    if (element % 2 == 0)
+                    {
+                        summ += element;
+                    }
                 }
             }
             return summ;

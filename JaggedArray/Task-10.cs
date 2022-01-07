@@ -13,17 +13,20 @@ namespace JaggedArray
 
         public Task_10(int [][] array) => _array = array;
 
-        public int MaxElement()
+        public int? MaxElement()
         {
             var maxValue = int.MinValue;
             for(var i=0; i < _array.Length; i++)
             {
                 for (var j = 0; j < _array[i].Length; j++)
                 {
-                    if(_array[i][j] > maxValue) maxValue = _array[i][j];
+                    if (_array[i][j] > maxValue)
+                    {
+                        maxValue = _array[i][j];
+                    }
                 }
             }
-            return maxValue;
+            return null;
         }
     }
 }

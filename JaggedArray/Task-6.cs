@@ -13,15 +13,17 @@ namespace JaggedArray
 
         public Task_6(int[][] array) => _array = array;
 
-        public int FirstNegativeElement()
+        public int? FirstNegativeElement()
         {
             foreach(var item in _array)
             {
                 foreach (var element in item)
                     if (element < 0)
+                    {
                         return element;
+                    }
             }
-            return 0;
+            return null;
         }
     }
 }

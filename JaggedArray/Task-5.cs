@@ -16,14 +16,18 @@ namespace JaggedArray
             _array = array;
         }
 
-        public int NumberNegativeElements()
+        public int? NumberNegativeElements()
         {
             var numberElements = 0;
             foreach (var item in _array)
             {
-                numberElements += (from element in item
-                                   where element < 0
-                                   select element).Count();
+                foreach(var element in item)
+                {
+                    if (element < 0)
+                    {
+                        numberElements++;
+                    }
+                }
             }
             return numberElements;
         }
