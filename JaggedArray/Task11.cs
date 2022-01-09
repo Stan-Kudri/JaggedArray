@@ -6,27 +6,29 @@ using System.Threading.Tasks;
 
 namespace JaggedArray
 {
-    //Найти сумму четных элементов
-    internal class Task_8
+    //Найти минимальный элемент массива
+    public class Task11
     {
         private readonly int[][] _array;
 
-        public Task_8(int [][] array) => _array = array;
+        public Task11(int[][] array) => _array = array;
 
-        public int SummEvenElements()
+        public int? MinElement()
         {
-            var summ = 0;
+            var minValue = int.MaxValue;
             foreach(var item in _array)
             {
                 foreach (var element in item)
                 {
-                    if (element % 2 == 0)
+                    if (element < minValue)
                     {
-                        summ += element;
+                        minValue = element;
                     }
                 }
             }
-            return summ;
+            if (minValue != int.MaxValue)
+                return minValue;
+            return null;
         }
     }
 }

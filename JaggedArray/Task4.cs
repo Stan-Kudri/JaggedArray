@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace JaggedArray
 {
     //Найти количество положительных элементов массива
-    internal class Task_4
+    public class Task4
     {
         private readonly int[][] _array;
 
-        public Task_4(int[][] array)
+        public Task4(int[][] array)
         {
             _array = array;
         }

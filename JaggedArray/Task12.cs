@@ -7,57 +7,61 @@ using System.Threading.Tasks;
 namespace JaggedArray
 {
     //Найти максимальный и минимальный элемент массива
-    internal class Task_12
+    public class Task12
     {
         private readonly int[][] _array;
         private MaxAndMinValue MaxMin;
 
-        public Task_12(int[][] array)
+        public Task12(int[][] array)
         {
             _array = array;            
         }
 
         public class MaxAndMinValue
         {
-            private readonly int MaxValue;
-            private readonly int MinValue;
+            private readonly int? _maxValue;
+            private readonly int? _minValue;
 
+            public int? MaxValue => _maxValue;
+            public int? MinValue => _minValue;
             public MaxAndMinValue()
             {
 
             }
 
-            public MaxAndMinValue(int maxValue, int minValue)
+            public MaxAndMinValue(int? maxValue, int? minValue)
             {
                 if (maxValue > minValue)
                 {
-                    MaxValue = maxValue;
-                    MinValue = minValue;
+                    _maxValue = maxValue;
+                    _minValue = minValue;
                 }
                 else
                 {
-                    MaxValue = minValue;
-                    MinValue = maxValue;
+                    _maxValue = minValue;
+                    _minValue = maxValue;
                 }
             }
 
             public override string? ToString()
             {
-                if (string.IsNullOrEmpty(MaxValue.ToString()) || string.IsNullOrEmpty(MinValue.ToString()))
+                if (string.IsNullOrEmpty(_maxValue.ToString()) || string.IsNullOrEmpty(_minValue.ToString()))
             {
                     return base.ToString();
                 }
-                string str = $"Минимальный элемент массива {MinValue}, а максимальный {MaxValue}";
+                string str = $"Минимальный элемент массива {_minValue}, а максимальный {_maxValue}";
                 return str;
             }
         }
-
         
-
         public MaxAndMinValue MaxAndMinElement()
         {
             var maxValue = int.MinValue;
             var minValue = int.MaxValue;
+            if (_array.Count() < 1)
+            {
+                return new MaxAndMinValue(null, null);
+            }
             for (var i = 0; i < _array.Length; i++)
             {
                 for (var j = 0; j < _array[i].Length; j++)
@@ -65,10 +69,9 @@ namespace JaggedArray
                     if (_array[i][j] > maxValue) maxValue = _array[i][j];
                     if (_array[i][j] < minValue) minValue = _array[i][j];
                 }
-            }
+            }            
             MaxMin = new MaxAndMinValue(maxValue, minValue);
             return MaxMin;
         }
-
     }    
 }

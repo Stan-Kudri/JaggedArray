@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 namespace JaggedArray
 {
     //Найти сумму всех элементов массива
-    internal class Task_1
+    public class Task1
     {
         private readonly int[][] _array;
         
-        public Task_1(int[][] array)
+        public Task1(int[][] array)
         {
             _array = array;
         }
 
-        public int SummElements()
+        public int Sum()
         {
-            var summ = 0;
+            var sum = 0;
             foreach(var item in _array)
             {
-                summ += item.Sum();
+                sum += item.Sum();
             }
-            return summ;
+            return sum;
         }        
     }
 }

@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 namespace JaggedArray
 {
-    //Найти сумму всех отрицательных элементов массива
-    internal class Task_3
+    //Найти сумму нечетных элементов
+    public class Task9
     {
         private readonly int[][] _array;
 
-        public Task_3(int [][] array)
-        {
-            _array = array;
-        }
+        public Task9(int[][] array) => _array = array;
 
-        public int SummNegativeElements()
+        public int? SumNotEvenElements()
         {
             var summ = 0;
+            if (_array.Count() == 0)
+                return null;
             foreach (var item in _array)
             {
                 foreach (var element in item)
                 {
-                    if (element < 0)
+                    if (element % 2 != 0)
                     {
                         summ += element;
                     }

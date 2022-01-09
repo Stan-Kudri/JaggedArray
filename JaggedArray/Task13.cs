@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace JaggedArray
 {
     //Отсортировать зубья пузырьковым методом зубчатого массива
-    internal class Task_13
+    public class Task13
     {
         private readonly int[][] _array;
 
-        public Task_13(int [][] array)
+        public Task13(int [][] array)
         {
             _array = array;
         }

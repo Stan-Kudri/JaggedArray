@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace JaggedArray
 {
     //Найти первый отрицательный элемент
-    internal class Task_6
+    public class Task6
     {
         private readonly int[][] _array;
 
-        public Task_6(int[][] array) => _array = array;
+        public Task6(int[][] array) => _array = array;
 
         public int? FirstNegativeElement()
         {

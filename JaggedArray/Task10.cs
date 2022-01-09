@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace JaggedArray
 {
     //Найти максимальный элемент массива
-    internal class Task_10
+    public class Task10
     {
         private readonly int[][] _array;
 
-        public Task_10(int [][] array) => _array = array;
+        public Task10(int [][] array) => _array = array;
 
         public int? MaxElement()
         {
@@ -26,6 +26,8 @@ namespace JaggedArray
                     }
                 }
             }
+            if(maxValue != int.MinValue)
+                return maxValue;
             return null;
         }
     }

@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace JaggedArray
 {
-    //Найти количество отрицательных элементов массива
-    internal class Task_5
+    //Найти сумму всех положительных элементов массива
+    public class Task2
     {
         private readonly int[][] _array;
 
-        public Task_5(int[][] array)
+        public Task2(int[][] array)
         {
             _array = array;
         }
 
-        public int? NumberNegativeElements()
+        public int SumPositiveElements()
         {
-            var numberElements = 0;
+            var summ = 0;
             foreach (var item in _array)
             {
-                foreach(var element in item)
+                foreach (var element in item)
                 {
-                    if (element < 0)
+                    if (element > 0)
                     {
-                        numberElements++;
+                        summ += element;
                     }
                 }
             }
-            return numberElements;
+            return summ;
         }
     }
 }
