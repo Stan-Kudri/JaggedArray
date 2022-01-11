@@ -10,8 +10,8 @@ namespace JaggedArray.Test
     public class Task12Test
     {
         [Theory]
-        [MemberData(nameof(TestData))]
-        public void MaxAndMinElementTest(int[][] array, int? expectMaxNumber, int? expectMinNumber)
+        [MemberData(nameof(TestData1))]
+        public void MaxAndMinElementTest1(int[][] array, int? expectMaxNumber, int? expectMinNumber)
         {
             var task = new Task12(array);
 
@@ -21,7 +21,7 @@ namespace JaggedArray.Test
             Assert.Equal(expectMinNumber, valueMaxAndMin.MinValue);
         }
 
-        public static IEnumerable<object[]> TestData()
+        public static IEnumerable<object[]> TestData1()
         {
             return new List<object[]>
             {
@@ -30,7 +30,7 @@ namespace JaggedArray.Test
                     new int[][]
                     {
                         new int [] { 1, 2, 3 },
-                        new int [] { 4, 5,}
+                        new int [] { 4, 5 }
                     },5,1
                 },
                 new object[]
@@ -38,7 +38,7 @@ namespace JaggedArray.Test
                     new int[][]
                     {
                         new int [] { -1, 2, 3 },
-                        new int [] { 4, -5,}
+                        new int [] { 4, -5 }
                     },4,-5
                 },
                 new object[]
@@ -46,23 +46,56 @@ namespace JaggedArray.Test
                     new int[][]
                     {
                         new int [] { 1, 1, 1 },
-                        new int [] { 1, 1,}
+                        new int [] { 1, 1 }
                     },1,1
                 },
                 new object[]
                 {
                     new int[][]
                     {
-
-                    },null, null
+                        new int [] { 1 },
+                        new int [] { -1 }
+                    },1,-1
                 },
                 new object[]
                 {
                     new int[][]
                     {
-                        new int [] { 1},
-                        new int [] { -1}
-                    },1,-1
+                        new int [] { 1 },
+                    },1,1
+                }
+            };
+        }
+
+        [Theory]
+        [MemberData(nameof(TestData2))]
+        public void MaxAndMinElementTest2(int[][] array, Task12.MaxAndMinValue expectClass)
+        {
+            var task = new Task12(array);
+
+            var valueMaxAndMin = task.MaxAndMinElement();
+
+            Assert.Equal(expectClass, valueMaxAndMin);
+        }
+
+        public static IEnumerable<object[]> TestData2()
+        {
+            return new List<object[]>
+            {
+                new object[]
+                {
+                    new int[][]
+                    {
+                        
+                    },null
+                },
+                new object[]
+                {
+                    new int[][]
+                    {
+                        new int[] { },
+                        new int[] { }
+                    },null
                 }
             };
         }

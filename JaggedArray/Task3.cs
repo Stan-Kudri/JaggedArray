@@ -18,18 +18,9 @@ namespace JaggedArray
 
         public int SumNegativeElements()
         {
-            var summ = 0;
-            foreach (var item in _array)
-            {
-                foreach (var element in item)
-                {
-                    if (element < 0)
-                    {
-                        summ += element;
-                    }
-                }
-            }
-            return summ;
+            var sum = 0;
+            sum += _array.Select(x => x.Where(p => p < 0).Sum()).Sum();
+            return sum;
         }
     }
 }

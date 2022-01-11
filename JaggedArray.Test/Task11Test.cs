@@ -29,7 +29,7 @@ namespace JaggedArray.Test
                     new int[][]
                     {
                     new int[] { 1, 2},
-                    new int[] { 3, 4},
+                    new int[] { 3, 4}
                     },1
                 },
                 new object[]
@@ -37,7 +37,7 @@ namespace JaggedArray.Test
                     new int[][]
                     {
                     new int[] { -1, 2},
-                    new int[] { 3, -4},
+                    new int[] { 3, -4}
                     },-4
                 },
                 new object[]
@@ -45,7 +45,7 @@ namespace JaggedArray.Test
                     new int[][]
                     {
                     new int[] { 0, 0},
-                    new int[] { 0, 0},
+                    new int[] { 0, 0}
                     },0
                 },
                 new object[]
@@ -53,6 +53,14 @@ namespace JaggedArray.Test
                     new int[][]
                     {
 
+                    },null
+                },
+                new object[]
+                {
+                    new int[][]
+                    {
+                        new int[] { },
+                        new int[] { }
                     },null
                 }
             };

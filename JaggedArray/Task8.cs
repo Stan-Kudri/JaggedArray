@@ -16,8 +16,10 @@ namespace JaggedArray
         public int? SumEvenElements()
         {
             var summ = 0;
-            if(_array.Count() == 0)
+            if (_array.Count() == 0)
+            {
                 return null;
+            }
             foreach (var item in _array)
             {
                 foreach (var element in item)

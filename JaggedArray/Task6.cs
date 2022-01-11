@@ -18,10 +18,12 @@ namespace JaggedArray
             foreach(var item in _array)
             {
                 foreach (var element in item)
+                {
                     if (element < 0)
                     {
                         return element;
                     }
+                }
             }
             return null;
         }

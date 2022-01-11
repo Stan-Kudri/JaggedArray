@@ -19,10 +19,7 @@ namespace JaggedArray
         public int Sum()
         {
             var sum = 0;
-            foreach(var item in _array)
-            {
-                sum += item.Sum();
-            }
+            sum += _array.Select(x => x.Sum()).Sum();
             return sum;
         }        
     }

@@ -14,7 +14,11 @@ namespace JaggedArray
         public Task11(int[][] array) => _array = array;
 
         public int? MinElement()
-        {
+        {            
+            if (!CheckForElement())
+            {
+                return null;
+            }
             var minValue = int.MaxValue;
             foreach(var item in _array)
             {
@@ -26,9 +30,21 @@ namespace JaggedArray
                     }
                 }
             }
-            if (minValue != int.MaxValue)
-                return minValue;
-            return null;
+            return minValue;
+        }
+
+        private bool CheckForElement()
+        {
+            int sum = 0;
+            foreach(var item in _array)
+            {
+                sum += item.Length;
+            }
+            if(sum == 0)
+            {
+                return false;
+            }
+            return true;            
         }
     }
 }

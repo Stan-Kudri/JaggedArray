@@ -15,7 +15,11 @@ namespace JaggedArray
 
         public int? MaxElement()
         {
-            var maxValue = int.MinValue;
+            if (!CheckForElement())
+            {
+                return null;
+            }
+            int maxValue = int.MinValue;
             for(var i=0; i < _array.Length; i++)
             {
                 for (var j = 0; j < _array[i].Length; j++)
@@ -25,10 +29,22 @@ namespace JaggedArray
                         maxValue = _array[i][j];
                     }
                 }
+            }            
+            return maxValue;
+        }
+
+        private bool CheckForElement()
+        {
+            int sum = 0;
+            foreach (var item in _array)
+            {
+                sum += item.Length;
             }
-            if(maxValue != int.MinValue)
-                return maxValue;
-            return null;
+            if (sum == 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
