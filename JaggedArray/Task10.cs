@@ -15,7 +15,7 @@ namespace JaggedArray
 
         public int? MaxElement()
         {
-            if (!CheckForElement())
+            if (!Extension.CheckForElement(_array))
             {
                 return null;
             }
@@ -31,20 +31,6 @@ namespace JaggedArray
                 }
             }            
             return maxValue;
-        }
-
-        private bool CheckForElement()
-        {
-            int sum = 0;
-            foreach (var item in _array)
-            {
-                sum += item.Length;
-            }
-            if (sum == 0)
-            {
-                return false;
-            }
-            return true;
         }
     }
 }

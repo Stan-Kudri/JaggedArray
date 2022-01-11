@@ -14,8 +14,8 @@ namespace JaggedArray
         public Task11(int[][] array) => _array = array;
 
         public int? MinElement()
-        {            
-            if (!CheckForElement())
+        {
+            if (!Extension.CheckForElement(_array))
             {
                 return null;
             }
@@ -31,20 +31,6 @@ namespace JaggedArray
                 }
             }
             return minValue;
-        }
-
-        private bool CheckForElement()
-        {
-            int sum = 0;
-            foreach(var item in _array)
-            {
-                sum += item.Length;
-            }
-            if(sum == 0)
-            {
-                return false;
-            }
-            return true;            
         }
     }
 }

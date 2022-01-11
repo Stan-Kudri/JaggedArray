@@ -10,8 +10,8 @@ namespace JaggedArray.Test
     public class Task12Test
     {
         [Theory]
-        [MemberData(nameof(TestData1))]
-        public void MaxAndMinElementTest1(int[][] array, int? expectMaxNumber, int? expectMinNumber)
+        [MemberData(nameof(TestDateForValue))]
+        public void TestJaggedArrayForValue(int[][] array, int? expectMaxNumber, int? expectMinNumber)
         {
             var task = new Task12(array);
 
@@ -21,7 +21,7 @@ namespace JaggedArray.Test
             Assert.Equal(expectMinNumber, valueMaxAndMin.MinValue);
         }
 
-        public static IEnumerable<object[]> TestData1()
+        public static IEnumerable<object[]> TestDateForValue()
         {
             return new List<object[]>
             {
@@ -68,8 +68,8 @@ namespace JaggedArray.Test
         }
 
         [Theory]
-        [MemberData(nameof(TestData2))]
-        public void MaxAndMinElementTest2(int[][] array, Task12.MaxAndMinValue expectClass)
+        [MemberData(nameof(TestDateForNull))]
+        public void TestJaggedArrayForNull(int[][] array, Task12.MaxAndMinValue expectClass)
         {
             var task = new Task12(array);
 
@@ -77,8 +77,7 @@ namespace JaggedArray.Test
 
             Assert.Equal(expectClass, valueMaxAndMin);
         }
-
-        public static IEnumerable<object[]> TestData2()
+        public static IEnumerable<object[]> TestDateForNull()
         {
             return new List<object[]>
             {

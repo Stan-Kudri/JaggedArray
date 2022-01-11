@@ -16,7 +16,7 @@ namespace JaggedArray
         public int? SumNotEvenElements()
         {
             var summ = 0;
-            if (_array.Count() == 0)
+            if (_array.Length == 0)
             {
                 return null;
             }
