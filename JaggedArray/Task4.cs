@@ -16,20 +16,6 @@ namespace JaggedArray
             _array = array;
         }
 
-        public int? NumberPositiveElements()
-        {
-            var numberElements = 0;
-            foreach(var item in _array)
-            {
-                foreach(var element in item)
-                {
-                    if(element > 0)
-                    {
-                        numberElements++;
-                    }
-                }
-            }
-            return numberElements;
-        }
+        public int? NumberPositiveElements() => _array.SelectMany(x => x).Where(y => y > 0).Count();
     }
 }

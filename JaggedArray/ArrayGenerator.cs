@@ -8,7 +8,6 @@ internal class ArrayGenerator
     {
         _column = Random.Shared.Next(2, 11);
     }
-
     public ArrayGenerator(int column)
     {
         _column = column;

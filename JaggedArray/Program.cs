@@ -3,18 +3,10 @@
 var arrayGenerator = new ArrayGenerator();
 var array = arrayGenerator.Generate();
 Print(array);
-Console.ReadLine();
 
-/*var task2Array = new Task_12(array);
-var maxmin = task2Array.MaxAndMinElement();
-Console.WriteLine(maxmin);*/
-var taskkk = new Task1(array);
-var max = taskkk.Sum();
-Console.WriteLine(max);
-
-var task1Array = new Task13(array);
-var sortArray = task1Array.BubbleTeethSort();
-Print(sortArray);
+var task13 = new Task13(array);
+var arraySortElement = task13.Sort();
+Print(arraySortElement);
 
 void Print(int[][] array)
 {

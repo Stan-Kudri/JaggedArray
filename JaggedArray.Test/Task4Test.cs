@@ -46,6 +46,14 @@ namespace JaggedArray.Test
                 },
                 new object[]
                 {
+                    new int[][]
+                    {
+                        new int[]{ },
+                        new int[]{ }
+                    },null
+                },
+                new object[]
+                {
                     new int [][]
                     {
                         new int [] { 0, 0 },
