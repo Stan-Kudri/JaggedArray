@@ -8,13 +8,10 @@ namespace JaggedArray
 {
     public static class Extension
     {
-        public static bool CheckForElement(int [][] array)
+        public static bool HaveElement(this int [][] array)
         {
             int sum = 0;
-            foreach (var item in array)
-            {
-                sum += item.Length;
-            }
+            sum += array.Select(x => x.Length).Sum();
             if (sum == 0)
             {
                 return false;

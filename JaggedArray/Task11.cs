@@ -15,22 +15,11 @@ namespace JaggedArray
 
         public int? MinElement()
         {
-            if (!Extension.CheckForElement(_array))
+            if (!Extension.HaveElement(_array))
             {
                 return null;
             }
-            var minValue = int.MaxValue;
-            foreach(var item in _array)
-            {
-                foreach (var element in item)
-                {
-                    if (element < minValue)
-                    {
-                        minValue = element;
-                    }
-                }
-            }
-            return minValue;
+            return _array.SelectMany(x => x).Min(x => x);
         }
     }
 }

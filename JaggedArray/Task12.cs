@@ -18,26 +18,12 @@ namespace JaggedArray
 
         public MaxAndMinValue? MaxAndMinElement()
         {
-            var maxValue = int.MinValue;
-            var minValue = int.MaxValue;
-            if (!Extension.CheckForElement(_array))
+            if (!Extension.HaveElement(_array))
             {
                 return null;
             }
-            for (var i = 0; i < _array.Length; i++)
-            {
-                for (var j = 0; j < _array[i].Length; j++)
-                {
-                    if (_array[i][j] > maxValue)
-                    {
-                        maxValue = _array[i][j];
-                    }
-                    if (_array[i][j] < minValue)
-                    {
-                        minValue = _array[i][j];
-                    }
-                }
-            }
+            int maxValue = _array.SelectMany(x => x).Max(x => x);
+            int minValue = _array.SelectMany(x => x).Min(x => x);
             return new MaxAndMinValue(maxValue, minValue); ;
         }
 
@@ -60,8 +46,7 @@ namespace JaggedArray
 
             public override string ToString()
             {
-                string str = $"Min = {_minValue}; Max = {_maxValue}";
-                return str;
+                return $"Min = {_minValue}; Max = {_maxValue}";
             }
         }
     }    

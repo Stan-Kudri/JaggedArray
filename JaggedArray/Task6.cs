@@ -15,6 +15,10 @@ namespace JaggedArray
 
         public int? FirstNegativeElement()
         {
+            int? result = _array.SelectMany(x => x).Cast<int?>().FirstOrDefault(x => x < 0);
+            return result;
+            /*int? result = _array.SelectMany(x => x).FirstOrDefault(x => x < 0 , ) ;
+            return result < 0 ? result : null;
             foreach(var item in _array)
             {
                 foreach (var element in item)
@@ -26,6 +30,7 @@ namespace JaggedArray
                 }
             }
             return null;
+            */
         }
     }
 }
