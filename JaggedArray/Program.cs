@@ -8,7 +8,7 @@ Console.ReadLine();
 var task12 = new Task12(new int[][] { }).MaxAndMinElement();
 Console.WriteLine(task12.ToString());
 var task1Array = new Task13(array);
-var sortArray = task1Array.BubbleTeethSort();
+var sortArray = task1Array.Sort();
 Print(sortArray);
 
 void Print(int[][] array)

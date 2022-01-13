@@ -15,7 +15,7 @@ namespace JaggedArray
 
         public int? MaxElement()
         {
-            if (!Extension.HaveElement(_array))
+            if (!Extension.HasElement(_array))
             {
                 return null;
             }

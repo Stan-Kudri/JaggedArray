@@ -18,7 +18,7 @@ namespace JaggedArray
 
         public MaxAndMinValue? MaxAndMinElement()
         {
-            if (!Extension.HaveElement(_array))
+            if (!Extension.HasElement(_array))
             {
                 return null;
             }

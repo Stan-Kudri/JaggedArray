@@ -10,17 +10,17 @@ namespace JaggedArray.Test
     public class Task13Test
     {
         [Theory]
-        [MemberData(nameof(TestData))]
-        public void BubbleTeethSortTest(int[][] array, int[][] expectArray)
+        [MemberData(nameof(SortTestDate))]
+        public void SortTest(int[][] array, int[][] expectArray)
         {
             var task = new Task13(array);
 
-            var sortArray = task.BubbleTeethSort();
+            var sortArray = task.Sort();
 
             Assert.Equal(expectArray, sortArray);
         }
 
-        public static IEnumerable<object []> TestData()
+        public static IEnumerable<object []> SortTestDate()
         {
             return new List<object[]>
             {
@@ -54,17 +54,6 @@ namespace JaggedArray.Test
                 {
                     new int[][]
                     {
-                        
-                    },
-                    new int[][]
-                    {
-                       
-                    }
-                },
-                new object []
-                {
-                    new int[][]
-                    {
                         new int[] { 1, 3 },
                         new int[] { 2, 6 }
                     },
@@ -72,6 +61,30 @@ namespace JaggedArray.Test
                     {
                         new int[] {1, 3 },
                         new int[] {2, 6 }
+                    }
+                },
+                new object []
+                {
+                    new int[][]
+                    {
+                        
+                    },
+                    new int[][]
+                    {
+                        
+                    }
+                },
+                new object []
+                {
+                    new int[][]
+                    {
+                        new int[] { },
+                        new int[] { }
+                    },
+                    new int[][]
+                    {
+                        new int[] { },
+                        new int[] { }
                     }
                 }
             };

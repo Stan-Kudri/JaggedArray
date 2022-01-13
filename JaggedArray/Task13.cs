@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JaggedArray
 {
-    //Отсортировать зубья пузырьковым методом зубчатого массива
+    //Отсортировать в зубчатом массиве строки пузырьковым методом
     public class Task13
     {
         private readonly int[][] _array;
@@ -15,15 +15,8 @@ namespace JaggedArray
         {
             _array = array;
         }
-
-        private void Swap(int[] array, int j, int k)
-        {
-            var number = array[k];
-            array[k] = array[j];
-            array[j] = number;
-        }
-
-        public int[][] BubbleTeethSort()
+        
+        public int[][]? Sort()
         {
             var sortedArray = _array;            
             for(var i = 0; i < sortedArray.Length; i++)
@@ -41,5 +34,13 @@ namespace JaggedArray
             }
             return sortedArray;
         }
+
+        private void Swap(int[] array, int j, int k)
+        {
+            var number = array[k];
+            array[k] = array[j];
+            array[j] = number;
+        }
+
     }
 }
