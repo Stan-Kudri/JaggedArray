@@ -15,11 +15,8 @@ namespace JaggedArray
 
         public int? FirstPositiveElement()
         {
-            var result = _array.SelectMany(x => x).Where(x => x > 0);
-            foreach (var value in result)
-            {
+            foreach (var value in _array.SelectMany(x => x).Where(x => x > 0))
                 return value;
-            }
             return null;
         }
     }

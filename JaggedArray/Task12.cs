@@ -18,10 +18,8 @@ namespace JaggedArray
 
         public MaxAndMinValue? MaxAndMinElement()
         {
-            if (!Extension.HasElement(_array))
-            {
+            if (!_array.HasElement())
                 return null;
-            }
             int maxValue = _array.SelectMany(x => x).Max(x => x);
             int minValue = _array.SelectMany(x => x).Min(x => x);
             return new MaxAndMinValue(maxValue, minValue); ;

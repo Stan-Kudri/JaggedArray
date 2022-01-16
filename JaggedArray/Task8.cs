@@ -15,13 +15,9 @@ namespace JaggedArray
 
         public int? SumEvenElements()
         {
-            var sum = 0;
-            if (!Extension.HasElement(_array))
-            {
+            if (!_array.HasElement())
                 return null;
-            }
-            sum += _array.SelectMany(x => x).Where(x => x % 2 == 0).Sum();
-            return sum;
+            return _array.SelectMany(x => x).Where(x => x % 2 == 0).Sum();
         }
     }
 }

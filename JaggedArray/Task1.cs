@@ -16,11 +16,6 @@ namespace JaggedArray
             _array = array;
         }
 
-        public int Sum()
-        {
-            var sum = 0;
-            sum += _array.Select(x => x.Sum()).Sum();
-            return sum;
-        }        
+        public int Sum() => _array.SelectMany(x => x).Sum();
     }
 }

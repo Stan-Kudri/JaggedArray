@@ -3,13 +3,10 @@
 var arrayGenerator = new ArrayGenerator();
 var array = arrayGenerator.Generate();
 Print(array);
-var task122 = new Task12(array).MaxAndMinElement();
-Console.ReadLine();
-var task12 = new Task12(new int[][] { }).MaxAndMinElement();
-Console.WriteLine(task12.ToString());
-var task1Array = new Task13(array);
-var sortArray = task1Array.Sort();
-Print(sortArray);
+
+var task13 = new Task13(array);
+var arraySortElement = task13.Sort();
+Print(arraySortElement);
 
 void Print(int[][] array)
 {

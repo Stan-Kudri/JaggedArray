@@ -15,10 +15,8 @@ namespace JaggedArray
 
         public int? MinElement()
         {
-            if (!Extension.HasElement(_array))
-            {
+            if (!_array.HasElement())
                 return null;
-            }
             return _array.SelectMany(x => x).Min(x => x);
         }
     }

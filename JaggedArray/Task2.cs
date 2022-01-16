@@ -16,11 +16,6 @@ namespace JaggedArray
             _array = array;
         }
 
-        public int SumPositiveElements()
-        {
-            var sum = 0;
-            sum += _array.SelectMany(x => x).Where(p => p > 0).Sum();
-            return sum;
-        }
+        public int SumPositiveElements() => _array.SelectMany(x => x).Where(p => p > 0).Sum();
     }
 }

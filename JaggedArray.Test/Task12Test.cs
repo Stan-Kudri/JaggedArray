@@ -10,7 +10,7 @@ namespace JaggedArray.Test
     public class Task12Test
     {
         [Theory]
-        [MemberData(nameof(HasElementsTestDate))]
+        [MemberData(nameof(HasElementsTestData))]
         public void HasElementsTest(int[][] array, int? expectMaxNumber, int? expectMinNumber)
         {
             var task = new Task12(array);
@@ -21,7 +21,7 @@ namespace JaggedArray.Test
             Assert.Equal(expectMinNumber, valueMaxAndMin.MinValue);
         }
 
-        public static IEnumerable<object[]> HasElementsTestDate()
+        public static IEnumerable<object[]> HasElementsTestData()
         {
             return new List<object[]>
             {
@@ -68,7 +68,7 @@ namespace JaggedArray.Test
         }
 
         [Theory]
-        [MemberData(nameof(HasNoElementsTestDate))]
+        [MemberData(nameof(HasNoElementsTestData))]
         public void HasNoElementsTest(int[][] array, Task12.MaxAndMinValue expectClass)
         {
             var task = new Task12(array);
@@ -77,7 +77,7 @@ namespace JaggedArray.Test
 
             Assert.Equal(expectClass, valueMaxAndMin);
         }
-        public static IEnumerable<object[]> HasNoElementsTestDate()
+        public static IEnumerable<object[]> HasNoElementsTestData()
         {
             return new List<object[]>
             {

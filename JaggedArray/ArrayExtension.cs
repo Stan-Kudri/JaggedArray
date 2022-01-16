@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JaggedArray
 {
-    public static class Extension
+    public static class ArrayExtension
     {
         public static bool HasElement(this int [][] array)
         {

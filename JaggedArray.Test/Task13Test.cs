@@ -10,7 +10,7 @@ namespace JaggedArray.Test
     public class Task13Test
     {
         [Theory]
-        [MemberData(nameof(SortTestDate))]
+        [MemberData(nameof(SortTestData))]
         public void SortTest(int[][] array, int[][] expectArray)
         {
             var task = new Task13(array);
@@ -20,7 +20,7 @@ namespace JaggedArray.Test
             Assert.Equal(expectArray, sortArray);
         }
 
-        public static IEnumerable<object []> SortTestDate()
+        public static IEnumerable<object []> SortTestData()
         {
             return new List<object[]>
             {

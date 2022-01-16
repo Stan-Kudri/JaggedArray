@@ -10,7 +10,7 @@ namespace JaggedArray.Test
     public class Task11Test
     {
         [Theory]
-        [MemberData(nameof(TestDate))]
+        [MemberData(nameof(TestData))]
         public void MinElementTest(int[][] array, int? expectNumber)
         {
             var task = new Task11(array);
@@ -20,7 +20,7 @@ namespace JaggedArray.Test
             Assert.Equal(expectNumber, value);
         }
 
-        public static IEnumerable<object[]> TestDate()
+        public static IEnumerable<object[]> TestData()
         {
             return new List<object[]>
             {

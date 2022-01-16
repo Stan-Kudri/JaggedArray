@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JaggedArray
 {
-    //Отсортировать в зубчатом массиве строки пузырьковым методом
+    //Отсортировать все строки массива
     public class Task13
     {
         private readonly int[][] _array;
@@ -32,7 +32,12 @@ namespace JaggedArray
                     }
                 }
             }
-            return sortedArray;
+            var newSortArray = new int[_array.Length][];
+            for(var i = 0; i < newSortArray.Length; i++)
+            {
+                newSortArray[i] = (int[]) sortedArray[i].Clone();
+            }
+            return newSortArray;
         }
 
         private void Swap(int[] array, int j, int k)
